@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import Hero from "./components/Hero";
 import ScrollingText from "./components/ScrollingText";
+import ScrollRevealText from "./components/ScrollRevealText";
+import HeroWithScroll from "./components/HeroWithScroll";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -98,6 +100,9 @@ export default function Home() {
 
       {/* Scrolling Text */}
       <ScrollingText />
+
+      {/* Hero with Scroll Effects */}
+      <HeroWithScroll />
 
       {/* Catering Section */}
       <section className="py-20 px-6 bg-light-beige" id="catering">
@@ -208,6 +213,9 @@ export default function Home() {
           </a>
         </div>
       </section>
+
+      {/* Scroll Reveal Text */}
+      <ScrollRevealText />
 
       {/* Tradition Section */}
       <section className="py-32 px-6 bg-cream">
