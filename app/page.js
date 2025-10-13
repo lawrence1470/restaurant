@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import Hero from "./components/Hero";
+import Hero from "./components/hero";
 import ScrollingText from "./components/ScrollingText";
 import ScrollRevealText from "./components/ScrollRevealText";
 import HeroWithScroll from "./components/HeroWithScroll";
@@ -98,8 +98,10 @@ export default function Home() {
       {/* Hero Section */}
       <Hero />
 
-      {/* Scrolling Text */}
-      <ScrollingText />
+      {/* Content wrapper - ensures solid backgrounds over hero */}
+      <div style={{ position: 'relative', zIndex: 20, backgroundColor: '#F5F0E8' }}>
+        {/* Scrolling Text */}
+        <ScrollingText />
 
       {/* Hero with Scroll Effects */}
       <HeroWithScroll />
@@ -373,6 +375,8 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      </div>
+      {/* End content wrapper */}
     </>
   );
 }
