@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import Hero from "./components/Hero";
+import ScrollingText from "./components/ScrollingText";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -92,24 +94,10 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section
-        className="min-h-screen flex items-center justify-center bg-cream px-6 pt-20"
-        role="banner"
-      >
-        <div className="max-w-5xl text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight mb-6 text-balance">
-            This is not just bread. This is our philosophy. It's about time.
-          </h1>
-          <p className="text-lg md:text-xl text-dark-brown/80 max-w-2xl mx-auto">
-            Time for slowing down. Time for connection. Enjoying simple pleasures.
-          </p>
-          <div className="mt-12">
-            <svg className="w-6 h-6 mx-auto animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-          </div>
-        </div>
-      </section>
+      <Hero />
+
+      {/* Scrolling Text */}
+      <ScrollingText />
 
       {/* Catering Section */}
       <section className="py-20 px-6 bg-light-beige" id="catering">

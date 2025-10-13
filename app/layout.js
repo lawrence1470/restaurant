@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Le Restaurant - Simple. Fresh. Honest.",
-  description: "Experience authentic dining where natural ingredients and traditional craftsmanship meet modern taste. Time for connection, time for simple pleasures.",
+  title: "Uva - Welcome Home | NYC Italian Restaurant",
+  description: "A New York City favorite, Uva welcomes you into a warm and relaxed atmosphere centered around quality Italian cuisine, a large explorative wine list with over 40 wines by the glass, and warm hospitality.",
 };
 
 export default function RootLayout({ children }) {
