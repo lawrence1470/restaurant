@@ -45,9 +45,9 @@ export default function Hero() {
   );
 
   // Calculate translateX for second line
-  // Max movement: ~668px (approximately 55% of viewport width at 1200px)
+  // Max movement: reduced to prevent text going off screen
   // Movement happens during first viewport scroll
-  const maxTranslateX = typeof window !== 'undefined' ? window.innerWidth * 0.55 : 660;
+  const maxTranslateX = typeof window !== 'undefined' ? window.innerWidth * 0.25 : 300;
   const translateX = scrollProgress * maxTranslateX;
 
   return (
@@ -97,11 +97,11 @@ export default function Hero() {
               className="intro__title"
               style={{
                 position: 'absolute',
-                top: '42.65%',
+                top: '50%',
                 left: '25px',
                 width: '74.33%',
                 maxWidth: '892px',
-                fontSize: 'clamp(60px, 21.24vw, 255px)',
+                fontSize: 'clamp(48px, 16vw, 180px)',
                 fontWeight: 400,
                 lineHeight: '0.757',
                 letterSpacing: '-0.03em',
@@ -110,7 +110,7 @@ export default function Hero() {
                 margin: 0,
                 display: 'flex',
                 flexDirection: 'column',
-                transform: `translateY(${scrollProgress * -30}px)`,
+                transform: `translateY(calc(-50% + ${scrollProgress * -30}px))`,
                 opacity: 1 - scrollProgress * 0.3,
                 transition: 'transform 0.1s ease-out, opacity 0.1s ease-out'
               }}

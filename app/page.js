@@ -2,8 +2,7 @@
 
 import Navigation from "./components/Navigation";
 import Hero from "./components/hero";
-import ScrollingText from "./components/ScrollingText";
-import HeroWithScroll from "./components/HeroWithScroll";
+import CarouselText from "./components/CarouselText";
 import CateringSection from "./components/CateringSection";
 import BetterChoiceSection from "./components/BetterChoiceSection";
 import WelcomeSection from "./components/WelcomeSection";
@@ -24,11 +23,8 @@ export default function Home() {
 
       {/* Content wrapper - ensures solid backgrounds over hero */}
       <div style={{ position: 'relative', zIndex: 20, backgroundColor: '#F5F0E8' }}>
-        {/* Scrolling Text */}
-        <ScrollingText />
-
-        {/* Hero with Scroll Effects */}
-        <HeroWithScroll />
+        {/* Carousel Text */}
+        <CarouselText />
 
         {/* Catering Section */}
         <CateringSection />
