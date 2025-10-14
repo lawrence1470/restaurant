@@ -153,7 +153,7 @@ export default function HeroWithScroll() {
                 >
                   philosophy
                 </motion.span>
-                . It's about time for slowing down, time for connection, enjoying simple pleasures.
+                . It&apos;s about time for slowing down, time for connection, enjoying simple pleasures.
               </motion.p>
             </motion.div>
 
