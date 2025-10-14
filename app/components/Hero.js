@@ -190,8 +190,8 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* Spacer to create scroll range - 200vh ensures content stays hidden until animation completes */}
-      <div style={{ height: '200vh', position: 'relative', zIndex: 1 }} />
+      {/* Spacer to create scroll range - 300vh adds delay after animation completes before next section appears */}
+      <div style={{ height: '300vh', position: 'relative', zIndex: 1 }} />
     </>
   );
 }
