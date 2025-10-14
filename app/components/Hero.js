@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import SpinningCircleText from './SpinningCircleText';
 
 export default function Hero() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -124,25 +125,19 @@ export default function Hero() {
               </span>
             </h1>
 
-            {/* Optional decorative element */}
+            {/* Spinning circle text */}
             <div
               className="intro__grid"
               style={{
                 position: 'absolute',
                 bottom: '10%',
                 right: '5%',
-                opacity: 0.6 - scrollProgress * 0.6,
                 transition: 'opacity 0.3s ease-out'
               }}
             >
-              <div
-                style={{
-                  width: 'clamp(100px, 15vw, 180px)',
-                  height: 'clamp(100px, 15vw, 180px)',
-                  borderRadius: '50%',
-                  border: `2px solid ${textColor}`,
-                  opacity: 0.3
-                }}
+              <SpinningCircleText
+                textColor={textColor}
+                opacity={0.6 - scrollProgress * 0.6}
               />
             </div>
           </div>
