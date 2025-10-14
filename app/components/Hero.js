@@ -146,6 +146,47 @@ export default function Hero() {
               />
             </div>
           </div>
+
+          {/* Scrolling carousel text at bottom */}
+          <div
+            style={{
+              position: 'absolute',
+              bottom: 0,
+              left: 0,
+              right: 0,
+              width: '100%',
+              padding: '0.25rem 0',
+              backgroundColor: 'rgba(64, 47, 32, 0.9)',
+              overflow: 'hidden',
+              zIndex: 5
+            }}
+          >
+            <div style={{ whiteSpace: 'nowrap' }}>
+              <div className="inline-block animate-scroll">
+                <span
+                  style={{
+                    fontSize: 'clamp(1rem, 3vw, 1.75rem)',
+                    fontWeight: 'bold',
+                    color: 'rgba(245, 240, 232, 0.15)',
+                    letterSpacing: '0.05em'
+                  }}
+                >
+                  FRESH • LOCAL • SEASONAL • HANDCRAFTED •
+                </span>
+                {/* Duplicate for seamless loop */}
+                <span
+                  style={{
+                    fontSize: 'clamp(1rem, 3vw, 1.75rem)',
+                    fontWeight: 'bold',
+                    color: 'rgba(245, 240, 232, 0.15)',
+                    letterSpacing: '0.05em'
+                  }}
+                >
+                  FRESH • LOCAL • SEASONAL • HANDCRAFTED •
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
