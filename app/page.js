@@ -1,7 +1,7 @@
 'use client';
 
 import Navigation from "./components/Navigation";
-import Hero from "./components/hero";
+import Hero from "./components/Hero";
 import CateringSection from "./components/CateringSection";
 import BetterChoiceSection from "./components/BetterChoiceSection";
 import WelcomeSection from "./components/WelcomeSection";
