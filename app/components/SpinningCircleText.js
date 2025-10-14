@@ -1,16 +1,22 @@
 'use client';
 
-export default function SpinningCircleText({ text = "FRESH • LOCAL • SEASONAL • HANDCRAFTED •", textColor, opacity = 1 }) {
+export default function SpinningCircleText({
+  text = "FRESH • LOCAL • SEASONAL • HANDCRAFTED •",
+  textColor,
+  opacity = 1,
+  rotation = 0
+}) {
   return (
     <svg
-      className="animate-rotate"
       width="clamp(120px, 18vw, 200px)"
       height="clamp(120px, 18vw, 200px)"
       viewBox="0 0 200 200"
       style={{
         width: 'clamp(120px, 18vw, 200px)',
         height: 'clamp(120px, 18vw, 200px)',
-        opacity
+        opacity,
+        transform: `rotate(${rotation}deg)`,
+        transition: 'opacity 0.3s ease-out'
       }}
       role="img"
       aria-label="Fresh Local Seasonal Handcrafted"

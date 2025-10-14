@@ -51,6 +51,9 @@ export default function Hero() {
   const maxTranslateX = typeof window !== 'undefined' ? window.innerWidth * 0.25 : 300;
   const translateX = scrollProgress * maxTranslateX;
 
+  // Calculate rotation for spinning circle (0.5 rotation during scroll for subtle effect)
+  const circleRotation = scrollProgress * 360 * 0.5;
+
   return (
     <>
       {/* Fixed intro container matching Concrete Club structure */}
@@ -138,6 +141,7 @@ export default function Hero() {
               <SpinningCircleText
                 textColor={textColor}
                 opacity={0.6 - scrollProgress * 0.6}
+                rotation={circleRotation}
               />
             </div>
           </div>
